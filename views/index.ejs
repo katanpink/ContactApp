@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+</head>
+<body>
+    <% contacts.forEach((contact, index) => { %>
+        <div>
+            <%= contact.name %>
+            <a href="/edit/<%= index %>">Edit</a>
+            <a href="/view/<%= index %>">View</a>
+            <a href="/delete/<%= index %>">Delete</a>
+        </div>
+    <% }) %>
+    <a href="/add">add to the list</a>
+</body>
+</html>
